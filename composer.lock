@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9c769a2d0ffcd3988d12889d1d3a3a41",
+    "hash": "eab68a7903d7debdea39e7b31fac8bbc",
     "packages": [
         {
             "name": "kdyby/autowired",
@@ -58,16 +58,16 @@
         },
         {
             "name": "kdyby/facebook",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kdyby/Facebook.git",
-                "reference": "v1.0.0"
+                "reference": "844ad3a3702bf131e7a07854ca3dc0387ab6441a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kdyby/Facebook/zipball/v1.0.0",
-                "reference": "v1.0.0",
+                "url": "https://api.github.com/repos/Kdyby/Facebook/zipball/844ad3a3702bf131e7a07854ca3dc0387ab6441a",
+                "reference": "844ad3a3702bf131e7a07854ca3dc0387ab6441a",
                 "shasum": ""
             },
             "require": {
@@ -110,7 +110,7 @@
                 "nette",
                 "sdk"
             ],
-            "time": "2013-08-03 16:45:31"
+            "time": "2013-08-04 15:20:18"
         },
         {
             "name": "nette/nette",
@@ -247,6 +247,7 @@
     "stability-flags": {
         "nette/nette": 20,
         "kdyby/autowired": 20,
+        "kdyby/facebook": 20,
         "nette/tester": 20
     },
     "platform": {
