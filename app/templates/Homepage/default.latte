@@ -8,65 +8,13 @@
 <div id="content">
 	<h2>You have successfully created your Nette Framework project.</h2>
 
-	<div class="box">
-		<h2><img src="http://files.nette.org/sandbox/sourcecode.png" alt="">Explore source codes</h2>
-		<p>See source code of <a href="#template">this page template</a>, <a href="#layout">layout template</a> and
-		<a href="#presenter">corresponding presenter</a>. And feel free to modify them!</p>
-	</div>
+	<p>
+		{* this hack is here for simplicity *}
+		{? echo Nette\Diagnostics\Dumper::toHtml($user->identity->data); }
+	</p>
 
-	<div class="box">
-		<h2><a href="{$basePath}/adminer/"><img src="http://files.nette.org/sandbox/database.png" alt="">Manage database tables</a></h2>
-		<p>Manage your database using pre-installed tool <a href="{$basePath}/adminer/">Adminer</a> with an easy to use GUI.<p>
-	</div>
-
-	<div class="box">
-		<h2><a href="http://doc.nette.org/quickstart"><img src="http://files.nette.org/sandbox/book.png" alt="">Read<br>Quick-start tutorial</a></h2>
-		<p>If you are exploring Nette Framework for the first time, you should read the
-		<a href="http://doc.nette.org/quickstart">Quick Start</a>, <a href="http://doc.nette.org">documentation</a>,
-		<a href="http://pla.nette.org">tutorials</a> and <a href="http://forum.nette.org">forum</a>.</p>
-	</div>
-
-	<h2>We hope you enjoy this framework!</h2>
-
-	<section id="template">
-		<h2>This page template located at <span>{strstr($presenter->template->getFile(), app)}</span></h2>
-
-		<pre><code class="jush">{file_get_contents($presenter->template->getFile())}</code></pre>
-	</section>
-
-	<section id="layout">
-		<h2>Layout template located at <span>{strstr($template->getFile(), app)}</span></h2>
-
-		<pre><code class="jush">{file_get_contents($template->getFile())}</code></pre>
-	</section>
-
-	<section id="presenter">
-		<h2>Current presenter located at <span>{strstr($presenter->reflection->fileName, app)}</span></h2>
-
-		<pre><code class="jush-php">{file_get_contents($presenter->reflection->fileName)}</code></pre>
-	</section>
-
-	<footer>PHP {=PHP_VERSION} |
-		{ifset $_SERVER['SERVER_SOFTWARE']}Server {$_SERVER['SERVER_SOFTWARE']}{/ifset} |
-		Nette Framework {=Nette\Framework::VERSION}</footer>
 </div>
 {/block}
-
-{block scripts}
-{include #parent}
-<script src="http://jush.sourceforge.net/jush.js"></script>
-<script>
-	jush.create_links = false;
-	jush.highlight_tag('code');
-	$('code.jush').each(function(){ $(this).html($(this).html().replace(/\x7B[/$\w].*?\}/g, '<span class="jush-latte">$&</span>')) });
-
-	$('a[href^=#]').click(function(){
-		$('html,body').animate({ scrollTop: $($(this).attr('href')).show().offset().top - 5 }, 'fast');
-		return false;
-	});
-</script>
-{/block}
-
 
 {block head}
 <style>

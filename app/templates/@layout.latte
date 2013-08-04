@@ -13,7 +13,7 @@
 	<meta name="description" content="">
 	<meta name="robots" content="{$robots}" n:ifset="$robots">
 
-	<title>{block title|striptags|upper}Nette Application Skeleton{/block}</title>
+	<title>{block title|striptags|upper}Kdyby Facebook Canvas sandbox{/block}</title>
 
 	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/screen.css">
 	<link rel="stylesheet" media="print" href="{$basePath}/css/print.css">
@@ -21,7 +21,7 @@
 	{block head}{/block}
 </head>
 
-<body>
+<body data-fb-appid="{$facebookAppId}">
 	<script> document.documentElement.className+=' js' </script>
 
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
@@ -29,9 +29,10 @@
 	{include #content}
 
 	{block scripts}
-	<script src="{$basePath}/js/jquery.js"></script>
-	<script src="{$basePath}/js/netteForms.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
+		<script src="{$basePath}/js/jquery.js"></script>
+		<script src="{$basePath}/js/netteForms.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js"></script>
+		<script src="{$basePath}/js/main.js"></script>
 	{/block}
 </body>
 </html>

@@ -3,8 +3,59 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "300ff969a5e09014a1d8a3a66c9c180f",
+    "hash": "9c769a2d0ffcd3988d12889d1d3a3a41",
     "packages": [
+        {
+            "name": "kdyby/autowired",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kdyby/Autowired.git",
+                "reference": "v1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kdyby/Autowired/zipball/v1.0.0",
+                "reference": "v1.0.0",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "@dev"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Kdyby\\Autowired": "src/"
+                },
+                "classmap": [
+                    "src/Kdyby/Autowired/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Filip Procházka",
+                    "homepage": "http://filip-prochazka.com"
+                }
+            ],
+            "description": "Syntax sugar for working with services in Nette Framework",
+            "homepage": "http://kdyby.org",
+            "keywords": [
+                "autowire",
+                "di",
+                "kdyby",
+                "nette"
+            ],
+            "time": "2013-07-29 23:12:31"
+        },
         {
             "name": "kdyby/facebook",
             "version": "v1.0.0",
@@ -67,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/nette.git",
-                "reference": "64fac2a55b0365da3b5aa4ae6b7a7c57f18c0f6d"
+                "reference": "c71259c47ce1a3527f0848d0b77610a0c13c28ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/nette/zipball/64fac2a55b0365da3b5aa4ae6b7a7c57f18c0f6d",
-                "reference": "64fac2a55b0365da3b5aa4ae6b7a7c57f18c0f6d",
+                "url": "https://api.github.com/repos/nette/nette/zipball/c71259c47ce1a3527f0848d0b77610a0c13c28ba",
+                "reference": "c71259c47ce1a3527f0848d0b77610a0c13c28ba",
                 "shasum": ""
             },
             "require": {
@@ -133,7 +184,7 @@
                 "neon",
                 "templating"
             ],
-            "time": "2013-08-03 18:21:15"
+            "time": "2013-08-04 13:43:30"
         }
     ],
     "packages-dev": [
@@ -195,6 +246,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "nette/nette": 20,
+        "kdyby/autowired": 20,
         "nette/tester": 20
     },
     "platform": {

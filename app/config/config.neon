@@ -5,11 +5,14 @@
 # http://nette.org/security-warning
 #
 common:
-	parameters:
-
 	php:
 		date.timezone: Europe/Prague
 		# zlib.output_compression: yes
+
+
+	extensions:
+		facebook: Kdyby\Facebook\DI\FacebookExtension
+
 
 	nette:
 		application:
@@ -18,13 +21,19 @@ common:
 		session:
 			expiration: 14 days
 
+		security:
+			frames: null
+
+
+	facebook:
+		permissions: [email]
+		canvasBaseUrl: https://apps.facebook.com/kdyby-canvas-example/
+
 
 	services:
 		routerFactory: RouterFactory
 		router: @routerFactory::createRouter
 
-
-	factories:
 
 
 production < common:
